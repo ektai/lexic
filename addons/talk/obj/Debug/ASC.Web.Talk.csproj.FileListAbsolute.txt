@@ -1,0 +1,9 @@
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\callback.htm
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.Talk.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.Talk.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\talk\obj\Debug\ASC.Web.Talk.csprojResolveAssemblyReference.cache
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\talk\obj\Debug\ASC.Web.Talk.Resources.TalkOverviewResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\talk\obj\Debug\ASC.Web.Talk.Resources.TalkResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\talk\obj\Debug\ASC.Web.Talk.csproj.GenerateResource.Cache
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\talk\obj\Debug\ASC.Web.Talk.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\talk\obj\Debug\ASC.Web.Talk.pdb

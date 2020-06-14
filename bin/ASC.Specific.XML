@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASC.Specific</name>
+    </assembly>
+    <members>
+        <member name="T:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint">
+            <summary>
+            Authorization for api
+            </summary>
+        </member>
+        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets authentication token for use in api authorization
+            </summary>
+            <short>
+            Get token
+            </short>
+            <param name="userName">user name or email</param>
+            <param name="password">password</param>
+            <param name="provider">social media provider type</param>
+            <param name="accessToken">provider token</param>
+            <returns>tokent to use in 'Authorization' header when calling API methods</returns>
+            <exception cref="T:System.Security.Authentication.AuthenticationException">Thrown when not authenticated</exception>
+        </member>
+        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.SaveMobilePhone(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Set mobile phone for user
+            </summary>
+            <param name="userName">user name or email</param>
+            <param name="password">password</param>
+            <param name="provider">social media provider type</param>
+            <param name="accessToken">provider token</param>
+            <param name="mobilePhone">new mobile phone</param>
+            <returns>mobile phone</returns>
+        </member>
+        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.SendSmsCode(System.String,System.String,System.String,System.String)">
+            <summary>
+            Send sms code again
+            </summary>
+            <param name="userName">user name or email</param>
+            <param name="password">password</param>
+            <param name="provider">social media provider type</param>
+            <param name="accessToken">provider token</param>
+            <returns>mobile phone</returns>
+        </member>
+        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets two-factor authentication token for use in api authorization
+            </summary>
+            <short>
+            Get token
+            </short>
+            <param name="userName">user name or email</param>
+            <param name="password">password</param>
+            <param name="provider">social media provider type</param>
+            <param name="accessToken">provider token</param>
+            <param name="code">two-factor authentication code</param>
+            <returns>tokent to use in 'Authorization' header when calling API methods</returns>
+        </member>
+        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.RegisterUserOnPersonal(System.String,System.String,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            Request of invitation by email on personal.lexic.xyz
+            </summary>
+            <param name="email">Email address</param>
+            <param name="lang">Culture</param>
+            <param name="spam">User consent to subscribe to the LEXIC newsletter</param>
+            <param name="analytics">Track analytics</param>
+            <param name="recaptchaResponse">recaptcha token</param>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String)">
+            <summary>
+            Check userName and password
+            </summary>
+            <param name="userName">user name or email</param>
+            <param name="password">password</param>
+            <param name="key"></param>
+            <exception cref="T:System.Security.Authentication.AuthenticationException">Thrown when not authenticated</exception>
+            <visible>false</visible>
+        </member>
+        <member name="P:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.Name">
+            <summary>
+            Entry point name
+            </summary>
+        </member>
+        <member name="P:ASC.Specific.CapabilitiesApi.CapabilitiesData.SsoUrl">
+            <summary>
+            if empty sso is disabled
+            </summary>
+        </member>
+        <member name="T:ASC.Specific.CapabilitiesApi.CapabilitiesEntryPoint">
+            <summary>
+            Capabilities for api
+            </summary>
+        </member>
+        <member name="M:ASC.Specific.CapabilitiesApi.CapabilitiesEntryPoint.#ctor(ASC.Api.Impl.ApiContext)">
+            <summary>
+             Constructor
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ASC.Specific.CapabilitiesApi.CapabilitiesEntryPoint.GetPortalCapabilities">
+            <summary>
+            Returns the information about portal capabilities
+            </summary>
+            <short>
+            Get portal capabilities
+            </short>
+            <returns>CapabilitiesData</returns>
+        </member>
+        <member name="P:ASC.Specific.CapabilitiesApi.CapabilitiesEntryPoint.Name">
+            <summary>
+            Entry point name
+            </summary>
+        </member>
+    </members>
+</doc>

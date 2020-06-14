@@ -1,0 +1,14 @@
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\callback.htm
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.Mail.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.Mail.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\mail\obj\Debug\ASC.Web.Mail.csprojResolveAssemblyReference.cache
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\mail\obj\Debug\ASC.Web.Mail.Resources.MailAdministrationResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\mail\obj\Debug\ASC.Web.Mail.Resources.MailActionCompleteResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\mail\obj\Debug\ASC.Web.Mail.Resources.MailApiErrorsResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\mail\obj\Debug\ASC.Web.Mail.Resources.MailApiResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\mail\obj\Debug\ASC.Web.Mail.Resources.MailAttachmentsResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\mail\obj\Debug\ASC.Web.Mail.Resources.MailResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\mail\obj\Debug\ASC.Web.Mail.Resources.MailScriptResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\mail\obj\Debug\ASC.Web.Mail.csproj.GenerateResource.Cache
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\mail\obj\Debug\ASC.Web.Mail.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\addons\mail\obj\Debug\ASC.Web.Mail.pdb

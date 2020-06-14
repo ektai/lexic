@@ -1,0 +1,1776 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASC.Api.Projects</name>
+    </assembly>
+    <members>
+        <member name="T:ASC.Api.Projects.ProjectApi">
+            <summary>
+            Projects access
+            </summary>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.#ctor(ASC.Api.Impl.ApiContext,ASC.Api.Documents.DocumentsApi)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="context"></param>
+            <param name="documentsApi">Docs api</param>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetMessageByFilter(System.Int32,System.Int32,System.Guid,System.Guid,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Boolean,System.Boolean,System.Nullable{ASC.Projects.Core.Domain.MessageStatus})">
+            <summary>
+            Returns the list with the detailed information about all the message matching the filter parameters specified in the request
+            </summary>
+            <short>
+             Get message by filter
+            </short>
+            <category>Discussions</category>
+            <param name="projectid" optional="true"> Project ID</param>
+            <param name="tag" optional="true">Project Tag</param>
+            <param name="departament" optional="true">Departament GUID</param>
+            <param name="participant" optional="true">Participant GUID</param>
+            <param name="createdStart" optional="true">Minimum value of message creation date</param>
+            <param name="createdStop" optional="true">Maximum value of message creation date</param>
+            <param name="lastId">Last message ID</param>
+            <param name="myProjects">Messages in my projects</param>
+            <param name="follow">Followed messages</param>
+            <param name="status"></param>
+            <returns>List of messages</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectMessages(System.Int32)">
+            <summary>
+            Returns the list of all the messages in the discussions within the project with the ID specified in the request
+            </summary>
+            <short>
+            Messages
+            </short>
+            <category>Discussions</category>
+            <param name="projectid">Project ID</param>
+            <returns>List of messages</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.AddProjectMessage(System.Int32,System.String,System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            Adds a message to the selected discussion within the project with the ID specified in the request
+            </summary>
+            <short>
+            Add message
+            </short>
+            <category>Discussions</category>
+            <param name="projectid">Project ID</param>
+            <param name="title">Discussion title</param>
+            <param name="content">Message text</param>
+            <param name="participants">IDs (GUIDs) of users separated with ','</param>
+            <param name="notify">Notify participants</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateProjectMessage(System.Int32,System.Int32,System.String,System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            Updates the selected message in the discussion within the project with the ID specified in the request
+            </summary>
+            <short>
+            Update message
+            </short>
+            <category>Discussions</category>
+            <param name="messageid">Message ID</param>
+            <param name="projectid">Project ID</param>
+            <param name="title">Discussion title</param>
+            <param name="content">Message text</param>
+            <param name="participants">IDs (GUIDs) of users separated with ','</param>
+            <param name="notify">Notify participants</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateProjectMessage(System.Int32,ASC.Projects.Core.Domain.MessageStatus)">
+            <summary>
+            Updates the selected message status
+            </summary>
+            <short>
+            Update message status
+            </short>
+            <category>Discussions</category>
+            <param name="messageid">Message ID</param>
+            <param name="status">Project ID</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteProjectMessage(System.Int32)">
+            <summary>
+            Deletes the message with the ID specified in the request from a project discussion
+            </summary>
+            <short>
+            Delete message
+            </short>
+            <category>Discussions</category>
+            <param name="messageid">Message ID</param>
+            <returns></returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectMessage(System.Int32)">
+            <summary>
+            Returns the detailed information about the message with the ID specified in the request
+            </summary>
+            <short>
+            Message
+            </short>
+            <category>Discussions</category>
+            <param name="messageid">Message ID</param>
+            <returns>Message</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetMessageFiles(System.Int32)">
+            <summary>
+            Returns the detailed information about files attached to the message with the ID specified in the request
+            </summary>
+            <short>
+            Message files
+            </short>
+            <category>Files</category>
+            <param name="messageid">Message ID</param>
+            <returns> List of message files</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UploadFilesToMessage(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Uploads the file specified in the request to the selected message
+            </summary>
+            <short>
+            Upload file to message
+            </short>
+            <category>Files</category>
+            <param name="messageid">Message ID</param>
+            <param name="files">File ID</param>
+            <returns>Message</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DetachFileFromMessage(System.Int32,System.Int32)">
+            <summary>
+            Detaches the selected file from the message with the ID specified in the request
+            </summary>
+            <short>
+            Detach file from message
+            </short>
+            <category>Files</category>
+            <param name="messageid">Message ID</param>
+            <param name="fileid">File ID</param>
+            <returns>Message</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DetachFileFromMessage(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Detaches the selected file from the message with the ID specified in the request
+            </summary>
+            <short>
+            Detach file from message
+            </short>
+            <category>Files</category>
+            <param name="messageid">Message ID</param>
+            <param name="files">File ID</param>
+            <returns>Message</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectRecentMessages">
+            <summary>
+            Returns the list of latest messages in the discussions within the project with the ID specified in the request
+            </summary>
+            <short>
+            Latest messages
+            </short>
+            <category>Discussions</category>
+            <returns>List of messages</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectMessagesComments(System.Int32)">
+            <summary>
+            Returns the list of comments to the messages in the discussions within the project with the ID specified in the request
+            </summary>
+            <short>
+            Message comments
+            </short>
+            <category>Comments</category>
+            <param name="messageid">Message ID</param>
+            <returns>Comments for message</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.AddProjectMessagesComment(System.Int32,System.String,System.Guid)">
+            <summary>
+            Adds a comment to the selected message in a discussion within the project with the content specified in the request. The parent comment ID can also be selected.
+            </summary>
+            <short>
+            Add message comment
+            </short>
+            <category>Comments</category>
+            <param name="messageid">Message ID</param>
+            <param name="content">Comment content</param>
+            <param name="parentId">Parrent comment ID</param>
+            <returns></returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.SubscribeToMessage(System.Int32)">
+            <summary>
+            Subscribe to notifications about the actions performed with the task with the ID specified in the request
+            </summary>
+            <short>
+            Subscribe to message action
+            </short>
+            <category>Discussions</category>
+            <returns>Discussion</returns>
+            <param name="messageid">Message ID</param>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.IsSubscribedToMessage(System.Int32)">
+            <summary>
+            Checks subscription to notifications about the actions performed with the discussion with the ID specified in the request
+            </summary>
+            <short>
+            Check subscription to discussion action
+            </short>
+            <category>Discussions</category>
+            <param name="messageid">Message ID</param>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectMessageSubscribers(System.Int32)">
+            <summary>
+            Get subscribers
+            </summary>
+            <short>
+            Get subscribers
+            </short>
+            <category>Discussions</category>
+            <param name="messageid">Message ID</param>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetPreview(System.String)">
+            <summary>
+            Get preview
+            </summary>
+            <short>
+            Get preview
+            </short>
+            <category>Discussions</category>
+            <param name="htmltext">html to create preview</param>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.SaveReportTemplate(System.String,System.String,System.Int32,System.Int32,System.Boolean,ASC.Projects.Core.Domain.Reports.ReportType,System.Int32,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Guid,System.Guid,ASC.Projects.Core.Domain.Reports.ReportTimeInterval,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Boolean)">
+            <summary>
+            Creates the project report template with the parameters specified in the request. Most of the parameters are optional and depend on the report type selected.
+            </summary>
+            <short>
+            Create report template
+            </short>
+            <category>Report</category>         
+            <param name="name">Report name</param>
+            <param name="period" optional="true">Report template generation period. Can be one of the following: Day/Week/Month</param>
+            <param name="periodItem" optional="true">Period item. Can be: weekday name (for weekly report, starting with Sunday), day of the month (for monthly report).</param>
+            <param name="hour" optional="true">Send time (hour)</param>
+            <param name="autoGenerated" optional="true">Automatically generated or not</param>
+            <param name="reportType" optional="true">Report type</param>
+            <param name="tag" optional="true">Tag</param>
+            <param name="project" optional="true">Project</param>
+            <param name="status" optional="true">Task status</param>       
+            <param name="departament" optional="true">Department/Group</param>
+            <param name="userId" optional="true">User GUID</param>
+            <param name="reportTimeInterval" optional="true">Report time interval</param>
+            <param name="fromDate" optional="true">Report period start date</param>
+            <param name="toDate" optional="true">Report period end date</param>
+            <param name="viewType" optional="true">View type: view by group or view by project</param>
+            <param name="noResponsible" optional="true">Show or hide tasks without responsible</param>   
+            <returns>Project report template</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateReportTemplate(System.Int32,System.String,System.String,System.Int32,System.Int32,System.Boolean,ASC.Projects.Core.Domain.Reports.ReportType,System.Int32,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Guid,System.Guid,ASC.Projects.Core.Domain.Reports.ReportTimeInterval,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Boolean)">
+            <summary>
+            Updates the selected project report template with the parameters specified in the request
+            </summary>
+            <short>
+            Update report template
+            </short>
+            <category>Report</category>           
+            <param name="reportid">Report template ID</param>    
+            <param name="name">Report name</param>
+            <param name="period" optional="true">Report template generation period. Can be one of the following: Day/Week/Month</param>
+            <param name="periodItem" optional="true">Period item. Can be: weekday name (for weekly report, starting with Sunday), day of the month (for monthly report).</param>
+            <param name="hour" optional="true">Send time (hour)</param>
+            <param name="autoGenerated" optional="true">Automatically generated or not</param>
+            <param name="reportType" optional="true">Report type</param>
+            <param name="tag" optional="true">Tag</param>
+            <param name="project" optional="true">Project</param>
+            <param name="status" optional="true">Task status</param>       
+            <param name="departament" optional="true">Department/Group</param>
+            <param name="userId" optional="true">User GUID</param>
+            <param name="reportTimeInterval" optional="true">Report time interval</param>
+            <param name="fromDate" optional="true">Report period start date</param>
+            <param name="toDate" optional="true">Report period end date</param>
+            <param name="viewType" optional="true">View type: view by group or view by project</param>
+            <param name="noResponsible" optional="true">Show or hide tasks without responsible</param>   
+            <returns>Project report template</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetReportTemplate(System.Int32)">
+            <summary>
+            
+            </summary>
+            <category>Report</category>
+            <param name="reportid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteReportTemplate(System.Int32)">
+            <summary>
+            Deletes the project report template with the ID specified in the request
+            </summary>
+            <short>
+            Delete report template
+            </short>
+            <category>Report</category>   
+            <param name="reportid">Report template ID</param>        
+            <returns>Project report template</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetAllProjects">
+            <summary>
+            Returns the list of all the portal projects with base information about them
+            </summary>
+            <short>
+            Projects
+            </short>
+            <category>Projects</category>
+            <returns>List of projects</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetMyProjects">
+            <summary>
+            Returns the list of all projects in which the current user participates
+            </summary>
+            <short>
+            Participated projects
+            </short>
+            <category>Projects</category>
+            <returns>List of projects</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetFollowProjects">
+            <summary>
+            Returns the list of all projects which the current user follows
+            </summary>
+            <short>
+            Followed projects
+            </short>
+            <category>Projects</category>
+            <returns>List of projects</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjects(ASC.Projects.Core.Domain.ProjectStatus)">
+            <summary>
+            Returns the list of all projects with the status specified in the request
+            </summary>
+            <short>
+            Project by status
+            </short>
+            <category>Projects</category>
+            <param name="status">"open"|"paused"|"closed"</param>
+            <returns>List of projects</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProject(System.Int32)">
+            <summary>
+            Returns the detailed information about the project with ID specified in the request
+            </summary>
+            <short>
+            Project by ID
+            </short>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <returns>Project</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectsByFilter(System.Int32,System.Nullable{ASC.Projects.Core.Domain.ProjectStatus},System.Guid,System.Guid,System.Guid,System.Boolean)">
+            <summary>
+            Returns the list of all the portal projects filtered using project title, status or participant ID and 'Followed' status specified in the request
+            </summary>
+            <short>
+            Projects
+            </short>
+            <category>Projects</category>
+            <param name="tag" optional="true">Project tag</param>
+            <param name="status" optional="true">Project status</param>
+            <param name="participant" optional="true">Participant GUID</param>
+            <param name="manager" optional="true">Project manager GUID</param>
+            <param name="departament"></param>
+            <param name="follow" optional="true">My followed project</param>
+            <returns>Projects list</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.SearchProject(System.Int32,System.String)">
+            <summary>
+            Returns the search results for the project containing the words/phrases matching the query specified in the request
+            </summary>
+            <short>
+            Search project
+            </short>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <param name="query">Search query</param>
+            <returns>List of results</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.SearchProjects(System.String)">
+            <summary>
+            Returns the list of all projects matching the query specified in the request
+            </summary>
+            <short>
+            Search all projects
+            </short>
+            <category>Projects</category>
+            <param name="query">Search query</param>
+            <returns>List of results</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.CreateProject(System.String,System.String,System.Guid,System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid},System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{ASC.Projects.Core.Domain.Task},System.Collections.Generic.IEnumerable{ASC.Projects.Core.Domain.Milestone},System.Nullable{System.Boolean})">
+            <summary>
+            Creates a new project using all the necessary (title, description, responsible ID, etc) and some optional parameters specified in the request
+            </summary>
+            <short>
+            Create project
+            </short>
+             <category>Projects</category>
+            <param name="title">Title</param>
+            <param name="description">Description</param>
+            <param name="responsibleId">Responsible ID</param>
+            <param name="tags">Tags</param>
+            <param name="private">Is project private</param>
+            <param name="participants" optional="true">Project participants</param>
+            <param name="notify" optional="true">Notify project manager</param>
+            <param name="tasks"></param>
+            <param name="milestones"></param>
+            <param name="notifyResponsibles"></param>
+            <returns>Newly created project</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateProject(System.Int32,System.String,System.String,System.Guid,System.String,System.Collections.Generic.IEnumerable{System.Guid},System.Nullable{ASC.Projects.Core.Domain.ProjectStatus},System.Nullable{System.Boolean},System.Boolean)">
+            <summary>
+            Updates the existing project information using all the parameters (project ID, title, description, responsible ID, etc) specified in the request
+            </summary>
+            <short>
+            Update project
+            </short>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <param name="title">Title</param>
+            <param name="description">Description</param>
+            <param name="responsibleId">Responsible ID</param>
+            <param name="tags">Tags</param>
+            <param name="participants">participants</param>
+            <param name="private">Is project private</param>
+            <param name="status">Status. One of (Open|Closed)</param>
+            <param name="notify">Notify project manager</param>
+            <returns>Updated project</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateProject(System.Int32,ASC.Projects.Core.Domain.ProjectStatus)">
+            <summary>
+            Updates the status of the project with the ID specified in the request
+            </summary>
+            <short>
+            Update project status
+            </short>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <param name="status">Status. One of (Open|Paused|Closed)</param>
+            <returns>Updated project</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteProject(System.Int32)">
+            <summary>
+            Deletes the project with the ID specified in the request from the portal
+            </summary>
+            <short>
+            Delete project
+            </short>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <returns>Deleted project</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteProjects(System.Int32[])">
+            <summary>
+            Deletes the project with the ID specified in the request from the portal
+            </summary>
+            <short>
+            Delete project
+            </short>
+            <category>Projects</category>
+            <param name="projectids">Project IDs</param>
+            <returns>Deleted project</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.FollowToProject(System.Int32)">
+            <summary>
+            Subscribe or unsubscribe to notifications about the actions performed with the project with the ID specified in the request
+            </summary>
+            <short>
+            Following/Unfollowing project
+            </short>
+            <category>Projects</category>
+            <param name="projectId">Project ID</param>
+            <returns>Project</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateProjectTags(System.Int32,System.String)">
+            <summary>
+            Updates the tags for the project with the selected project ID with the tags specified in the request
+            </summary>
+            <short>
+            Update project tags
+            </short>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <param name="tags">Tags</param>
+            <returns>project</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateProjectTags(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Updates the tags for the project with the selected project ID with the tags specified in the request
+            </summary>
+            <short>
+            Update project tags
+            </short>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <param name="tags">Tags</param>
+            <returns>project</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectTime(System.Int32)">
+            <summary>
+            Returns the detailed information about the time spent on the project with the ID specified in the request
+            </summary>
+            <short>
+            Project time spent
+            </short>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <returns>List of time spent</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTotalProjectTime(System.Int32)">
+            <summary>
+            
+            </summary>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <returns>List of time spent</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.AddProjectMilestone(System.Int32,System.String,ASC.Specific.ApiDateTime,System.Boolean,System.Boolean,System.String,System.Guid,System.Boolean)">
+            <summary>
+            Creates a new milestone using the parameters (project ID, milestone title, deadline, etc) specified in the request
+            </summary>
+            <short>
+            Add milestone
+            </short>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <param name="title">Milestone title</param>
+            <param name="deadline">Milestone deadline</param>
+            <param name="isKey">Is milestone key or not</param>
+            <param name="isNotify">Remind me 48 hours before the due date</param>
+            <param name="description">Milestone description</param>
+            <param name="responsible">Milestone responsible</param>
+            <param name="notifyResponsible">Notify responsible</param>
+            <returns>Created milestone</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectMilestones(System.Int32)">
+            <summary>
+            Returns the list of all the milestones within the project with the ID specified in the request
+            </summary>
+            <short>
+            Get milestones by project ID
+            </short>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <returns>List of milestones</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectMilestones(System.Int32,ASC.Projects.Core.Domain.MilestoneStatus)">
+            <summary>
+            Returns the list of all the milestones with the selected status within the project with the ID specified in the request
+            </summary>
+            <short>
+            Get milestones by project ID and milestone status
+            </short>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <param name="status">Milestone status</param>
+            <returns>List of milestones</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectTeam(System.Int32)">
+            <summary>
+            Returns the list of all users participating in the project with the ID specified in the request
+            </summary>
+            <short>
+            Project team
+            </short>
+            <category>Team</category>
+            <param name="projectid">Project ID</param>
+            <returns>List of team members</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectTeamExcluded(System.Int32)">
+            <summary>
+            Returns the list of all users participating in the project with the ID specified in the request
+            </summary>
+            <short>
+            Project team
+            </short>
+            <category>Team</category>
+            <param name="projectid">Project ID</param>
+            <returns>List of team members</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectTeam(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Returns the list of all users participating in the project with the ID specified in the request
+            </summary>
+            <short>
+            Project team
+            </short>
+            <category>Team</category>
+            <param name="ids">Project IDs</param>
+            <returns>List of team members</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.AddToProjectTeam(System.Int32,System.Guid)">
+            <summary>
+            Adds the user with the ID specified in the request to the selected project team
+            </summary>
+            <short>
+            Add to team
+            </short>
+            <category>Team</category>
+            <param name="projectid">Project ID</param>
+            <param name="userId">ID of the user to add</param>
+            <returns>List of team members</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.SetProjectTeamSecurity(System.Int32,System.Guid,ASC.Projects.Core.Domain.ProjectTeamSecurity,System.Boolean)">
+            <summary>
+            Sets the security rights for the user or users with the IDs specified in the request within the selected project
+            </summary>
+            <short>
+            Set team security
+            </short>
+            <category>Team</category>
+            <param name="projectid">Project ID</param>
+            <param name="userId">ID of the user to set</param>
+            <param name="security">Security rights</param>
+            <param name="visible">Visible</param>
+            <returns>List of team members</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteFromProjectTeam(System.Int32,System.Guid)">
+            <summary>
+            Removes the user with the ID specified in the request from the selected project team
+            </summary>
+            <short>
+            Remove from team
+            </short>
+            <category>Team</category>
+            <param name="projectid">Project ID</param>
+            <param name="userId">ID of the user to add</param>
+            <returns>List of team members</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateProjectTeam(System.Int32,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
+            <summary>
+            Updates the project team with the users IDs specified in the request
+            </summary>
+            <short>
+            Updates project team
+            </short>
+            <category>Team</category>
+            <param name="projectId">Project ID</param>
+            <param name="participants">IDs of users to update team</param>
+            <param name="notify">Notify project team</param>
+            <returns>String with the number of project participants</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectTasks(System.Int32)">
+            <summary>
+            Returns the list of all the tasks within the project with the ID specified in the request
+            </summary>
+            <short>
+            Tasks
+            </short>
+            <category>Tasks</category>
+            <param name="projectid">Project ID</param>
+            <returns></returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException">List of tasks</exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.AddProjectTask(System.Int32,System.String,ASC.Specific.ApiDateTime,ASC.Projects.Core.Domain.TaskPriority,System.String,System.Int32,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean,ASC.Specific.ApiDateTime)">
+            <summary>
+            Adds the task to the selected project with the parameters (responsible user ID, task description, deadline time, etc) specified in the request
+            </summary>
+            <short>
+            Add task
+            </short>
+            <category>Tasks</category>
+            <param name="projectid">Project ID</param>
+            <param name="description">Description</param>
+            <param name="deadline">Deadline time</param>
+            <param name="priority">Priority: Low|Normal|High</param>
+            <param name="title">Title</param>
+            <param name="milestoneid">Milestone ID</param>
+            <param name="responsibles">List responsibles</param>
+            <param name="notify">Notify responsible</param>
+            <param name="startDate"></param>
+            <returns>Created task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.AddProjectTaskByMessage(System.Int32,System.Int32)">
+            <summary>
+            Adds the task to the selected project 
+            </summary>
+            <short>
+            Add task
+            </short>
+            <category>Tasks</category>
+            <param name="projectid">Project ID</param>
+            <param name="messageid">Message ID</param>
+            <returns>Created task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectTasks(System.Int32,ASC.Projects.Core.Domain.TaskStatus)">
+            <summary>
+            Returns the list of all tasks with the selected status in the project with the ID specified in the request
+            </summary>
+            <short>
+            Tasks with status
+            </short>
+            <category>Tasks</category>
+            <param name="projectid">Project ID</param>
+            <param name="status">Task status. Can be one of: notaccept|open|closed|disable|unclassified|notinmilestone</param>
+            <returns>List of tasks</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectMyTasks(System.Int32,ASC.Projects.Core.Domain.TaskStatus)">
+            <summary>
+            Returns the list of all tasks for the current user with the selected status in the project with the ID specified in the request
+            </summary>
+            <short>
+            My tasks
+            </short>
+            <category>Tasks</category>
+            <param name="projectid">Project ID</param>
+            <param name="status">Task status. Can be one of: notaccept|open|closed|disable|unclassified|notinmilestone</param>
+            <returns>List of tasks</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectFiles(System.Int32)">
+            <summary>
+            Returns the detailed list of all files and folders for the project with the ID specified in the request
+            </summary>
+            <short>
+            Project files by project ID
+            </short>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <returns>Project files</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetEntityFiles(ASC.Projects.Core.Domain.EntityType,System.Int32)">
+            <summary>
+            Returns the list of all files within the entity (project, milestone, task) with the type and ID specified
+            </summary>
+            <short>
+            Entity files
+            </short>
+            <category>Files</category>
+            <param name="entityType">Entity type</param>
+            <param name="entityID">Entity ID</param>
+            <returns>Message</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UploadFilesToEntity(ASC.Projects.Core.Domain.EntityType,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Uploads the selected files to the entity (project, milestone, task) with the type and ID specified
+            </summary>
+            <short>
+            Upload file to entity
+            </short>
+            <category>Files</category>
+            <param name="entityType">Entity type </param>
+            <param name="entityID">Entity ID</param>
+            <param name="files">File IDs</param>
+            <returns>Uploaded files</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DetachFileFromEntity(ASC.Projects.Core.Domain.EntityType,System.Int32,System.Int32)">
+            <summary>
+            Detaches the selected file from the entity (project, milestone, task) with the type and ID specified
+            </summary>
+            <short>
+            Detach file from entity
+            </short>
+            <category>Files</category>
+            <param name="entityType">Entity type </param>
+            <param name="entityID">Entity ID</param>
+            <param name="fileid">File ID</param>
+            <returns>Detached file</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DetachFileFromEntity(ASC.Projects.Core.Domain.EntityType,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Detaches the selected file from the entity (project, milestone, task) with the type and ID specified
+            </summary>
+            <short>
+            Detach file from entity
+            </short>
+            <category>Files</category>
+            <param name="entityType">Entity type </param>
+            <param name="entityID">Entity ID</param>
+            <param name="files">files</param>
+            <returns>Detached file</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UploadFilesToEntity(ASC.Projects.Core.Domain.EntityType,System.Int32,System.String,System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Boolean,System.Boolean)">
+            <summary>
+            Uploads the selected files to the entity (project, milestone, task) with the type and ID specified
+            </summary>
+            <short>
+            Upload file to entity
+            </short>
+            <category>Files</category>
+            <param name="entityType">Entity type </param>
+            <param name="entityID">Entity ID</param>
+            <param name="folderid">ID of the folder to upload to</param>
+            <param name="file" visible="false">Request enput stream</param>
+            <param name="contentType" visible="false">Content-type header</param>
+            <param name="contentDisposition" visible="false">Content disposition header</param>
+            <param name="files" visible="false">List of files when posted as multipart/form-data</param>
+            <param name="createNewIfExist" visible="false">Create new if exist</param>
+            <param name="storeOriginalFileFlag" visible="false">If true, upload documents in original formats as well</param>
+            <returns>Uploaded files</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectsByContactID(System.Int32)">
+            <summary>
+             Returns the list of all the projects linked with the contact with the ID specified in the request
+            </summary>
+            <param name="contactid">Contact ID</param>
+            <category>Contacts</category>
+            <short>Get projects for contact</short> 
+            <returns>
+                Projects list
+            </returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.AddProjectContact(System.Int32,System.Int32)">
+            <summary>
+             Adds the selected contact to the project with the ID specified in the request
+            </summary>
+            <param name="projectid">Project ID</param>
+            <param name="contactid">Contact ID</param>
+            <category>Contacts</category>
+            <short>Add project contact</short> 
+            <returns>Project</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteProjectContact(System.Int32,System.Int32)">
+            <summary>
+             Deletes the selected contact from the project with the ID specified in the request
+            </summary>       
+            <param name="projectid">Project ID</param>
+            <param name="contactid">Contact ID</param>
+            <category>Contacts</category>
+            <short>Delete project contact</short> 
+            <returns>Project</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetAllTemplates">
+            <summary>
+            Returns the list of all the templates with base information about them
+            </summary>
+            <short>
+            Templates
+            </short>
+            <category>Template</category>
+            <returns>List of templates</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTemplate(System.Int32)">
+            <summary>
+            Returns the detailed information about the template with ID specified in the request
+            </summary>
+            <short>
+            Template by ID
+            </short>
+            <category>Template</category>
+            <param name="id">Template ID</param>
+            <returns>Template</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.CreateTemplate(System.String,System.String)">
+            <summary>
+            Creates a new template 
+            </summary>
+            <short>
+            Create template
+            </short>
+            <category>Template</category>
+            <param name="title">Title</param>
+            <param name="description">JSON template structure. Sample: {"tasks":[{"title":"Task without milestone"}],"milestones":[{"title":"milestone title","duration":0.5,"tasks":[{"title":"task milestone"}]}]}</param>
+            <returns>Newly created template</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateTemplate(System.Int32,System.String,System.String)">
+            <summary>
+            Updates the existing template information 
+            </summary>
+            <short>
+            Update template
+            </short>
+            <category>Template</category>
+            <param name="id">Template ID</param>
+            <param name="title">Title</param>
+            <param name="description">JSON template structure. Sample: {"tasks":[{"title":"Task without milestone"}],"milestones":[{"title":"milestone title","duration":0.5,"tasks":[{"title":"task milestone"}]}]}</param>
+            <returns>Updated template</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteTemplate(System.Int32)">
+            <summary>
+            Deletes the template with the ID specified in the request from the portal
+            </summary>
+            <short>
+            Delete template
+            </short>
+            <category>Template</category>
+            <param name="id">Project ID</param>
+            <returns>Deleted template</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectSecurityInfo">
+            <summary>
+             Returns the basic information about the access rights
+            </summary>
+            <short>
+              Access rights info
+            </short>
+            <category>Projects</category>
+            <returns>Basic information about access rights</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectMaxLastModified">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTaskOrder(System.Int32)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.SetTaskOrder(System.Int32,System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetMyTasks">
+            <summary>
+            Returns the list with the detailed information about all tasks for the current user
+            </summary>
+            <short>
+            My tasks
+            </short>
+            <category>Tasks</category>
+            <returns>List of tasks</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetMyTasks(ASC.Projects.Core.Domain.TaskStatus)">
+            <summary>
+            Returns the list with the detailed information about the tasks for the current user with the status specified in the request
+            </summary>
+            <short>
+            My tasks by status
+            </short>
+            <category>Tasks</category>
+            <param name="status">Status of task. One of notaccept|open|closed|disable|unclassified|notinmilestone</param>
+            <returns>List of tasks</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTask(System.Int32)">
+            <summary>
+            Returns the detailed information about the task with the ID specified in the request
+            </summary>
+            <short>
+            Get task
+            </short>
+            <category>Tasks</category>
+            <param name="taskid">Task ID</param>
+            <returns>Task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTask(System.Collections.Generic.IEnumerable{System.Int32})">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTaskByFilter(System.Int32,System.Boolean,System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Nullable{System.Int32},System.Boolean,System.Guid,System.Nullable{System.Guid},System.Guid,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32)">
+            <summary>
+            Returns the list with the detailed information about all the tasks matching the filter parameters specified in the request
+            </summary>
+            <short>
+            Get task by filter
+            </short>
+            <category>Tasks</category>
+            <param name="projectid" optional="true"> Project Id</param>
+            <param name="tag" optional="true">Project Tag</param>
+            <param name="status" optional="true">Task Status</param>
+            <param name="substatus" optional="true">Custom Task Status</param>
+            <param name="departament" optional="true">Departament GUID</param>
+            <param name="participant" optional="true">Participant GUID</param>
+            <param name="creator">Creator GUID</param>
+            <param name="milestone" optional="true">Milestone ID</param>
+            <param name="deadlineStart" optional="true">Minimum value of task deadline</param>
+            <param name="deadlineStop" optional="true">Maximum value of task deadline</param>
+            <param name="lastId">Last task ID</param>
+            <param name="myProjects">Tasks in My Projects</param>
+            <param name="myMilestones">Tasks in My Milestones</param>
+            <param name="nomilestone">Tasks without Milestone</param>
+            <param name="follow">Followed tasks</param>
+            <returns>List of tasks</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetSimpleTaskByFilter(System.Int32,System.Boolean,System.Nullable{System.Int32},System.Boolean,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Boolean,System.Guid,System.Nullable{System.Guid},System.Guid,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32)">
+            <summary>
+            Returns the list with the detailed information about all the tasks matching the filter parameters specified in the request
+            </summary>
+            <short>
+            Get task by filter
+            </short>
+            <category>Tasks</category>
+            <param name="projectid" optional="true"> Project Id</param>
+            <param name="tag" optional="true">Project Tag</param>
+            <param name="status" optional="true">Task Status</param>
+            <param name="departament" optional="true">Departament GUID</param>
+            <param name="participant" optional="true">Participant GUID</param>
+            <param name="creator">Creator GUID</param>
+            <param name="milestone" optional="true">Milestone ID</param>
+            <param name="deadlineStart" optional="true">Minimum value of task deadline</param>
+            <param name="deadlineStop" optional="true">Maximum value of task deadline</param>
+            <param name="lastId">Last task ID</param>
+            <param name="myProjects">Tasks in My Projects</param>
+            <param name="myMilestones">Tasks in My Milestones</param>
+            <param name="follow">Followed tasks</param>
+            <visible>false</visible>
+            <returns>List of tasks</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTaskFiles(System.Int32)">
+            <summary>
+            Returns the list of all files attached to the task with the ID specified in the request
+            </summary>
+            <short>
+            Get task files
+            </short>
+            <category>Files</category>
+            <param name="taskid">Task ID</param>
+            <returns>List of files</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UploadFilesToTask(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Uploads the file specified in the request to the selected task
+            </summary>
+            <short>
+            Upload file to task
+            </short>
+            <category>Files</category>
+            <param name="taskid">Task ID</param>
+            <param name="files">File ID</param>
+            <returns>List of tasks</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DetachFileFromTask(System.Int32,System.Int32)">
+            <summary>
+            Detaches the selected file from the task with the ID specified in the request
+            </summary>
+            <short>
+            Detach file from task
+            </short>
+            <category>Files</category>
+            <param name="taskid">Task ID</param>
+            <param name="fileid">File ID</param>
+            <returns>Task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DetachFileFromTask(System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Detaches the selected file from the task with the ID specified in the request
+            </summary>
+            <short>
+            Detach file from task
+            </short>
+            <category>Files</category>
+            <param name="taskid">Task ID</param>
+            <param name="files">files</param>
+            <returns>Task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateTask(System.Int32,ASC.Projects.Core.Domain.TaskStatus,System.Int32)">
+            <summary>
+            Updates the status of the task with the ID specified in the request
+            </summary>
+            <short>
+            Update task status
+            </short>
+            <category>Tasks</category>
+            <param name="taskid">Task ID</param>
+            <param name="status">Status of task. Can be one of: open|closed</param>
+            <param name="statusId"></param>
+            <returns>Updated task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateTasks(System.Int32[],ASC.Projects.Core.Domain.TaskStatus,System.Int32)">
+            <summary>
+            Updates the status of the tasks with the IDs specified in the request
+            </summary>
+            <short>
+            Update tasks status
+            </short>
+            <category>Tasks</category>
+            <param name="taskids">Tasks ID</param>
+            <param name="status">Status of tasks. Can be one of: open|closed</param>
+            <param name="statusId">Custom status id</param>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateTask(System.Int32,System.Int32)">
+            <summary>
+            Updates the milestone of the task with the ID specified in the request
+            </summary>
+            <short>
+            Update task milestone
+            </short>
+            <category>Tasks</category>
+            <param name="taskid">Task ID</param>
+            <param name="milestoneid">Milestone ID</param>
+            <returns>Updated task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateTasks(System.Int32[],System.Int32)">
+            <summary>
+            Updates the milestone of the tasks with the IDs specified in the request
+            </summary>
+            <short>
+            Update tasks milestone
+            </short>
+            <category>Tasks</category>
+            <param name="taskids">Task ID</param>
+            <param name="milestoneid">Milestone ID</param>
+            <returns>Updated tasks</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.CopyTask(System.Int32,System.String,ASC.Specific.ApiDateTime,ASC.Projects.Core.Domain.TaskPriority,System.String,System.Int32,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean,ASC.Specific.ApiDateTime,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Copy task
+            </summary>
+            <short>
+            Copy task
+            </short>
+            <category>Tasks</category>
+            <param name="projectid">Project ID</param>
+            <param name="description">Description</param>
+            <param name="deadline">Deadline time</param>
+            <param name="priority">Priority: Low|Normal|High</param>
+            <param name="title">Title</param>
+            <param name="milestoneid">Milestone ID</param>
+            <param name="responsibles">List responsibles</param>
+            <param name="notify">Notify responsible</param>
+            <param name="startDate"></param>
+            <param name="copyFrom"></param>
+            <param name="copySubtasks"></param>
+            <param name="copyFiles"></param>
+            <param name="removeOld"></param>
+            <returns>Created task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateProjectTask(System.Int32,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Nullable{ASC.Projects.Core.Domain.TaskPriority},System.String,System.Int32,System.Collections.Generic.IEnumerable{System.Guid},System.Nullable{System.Int32},System.Boolean,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Nullable{System.Int32})">
+            <summary>
+            Updates the selected task with the parameters (responsible user ID, task description, deadline time, etc) specified in the request
+            </summary>
+            <short>
+            Update Task
+            </short>
+            <category>Tasks</category>
+            <param name="taskid">task ID</param>
+            <param name="description">description</param>
+            <param name="deadline">deadline time</param>
+            <param name="startDate">task start date</param>
+            <param name="priority">priority</param>
+            <param name="title">title</param>
+            <param name="milestoneid">milestone ID</param>
+            <param name="responsibles">list responsibles</param>
+            <param name="projectID">Project ID</param>
+            <param name="notify">notify responsible</param>
+            <param name="status" optional="true">status</param>
+            <param name="progress" optional="true">Progress</param>
+            <returns>Updated task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteTask(System.Int32)">
+            <summary>
+            Deletes the task with the ID specified in the request from the project
+            </summary>
+            <short>
+            Delete task
+            </short>
+            <category>Tasks</category>
+            <param name="taskid">task ID</param>
+            <returns>Deleted task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteTasks(System.Int32[])">
+            <summary>
+            Deletes the tasks with the IDs specified in the request from the project
+            </summary>
+            <short>
+            Delete tasks
+            </short>
+            <category>Tasks</category>
+            <param name="taskids">task ID</param>
+            <returns>Deleted tasks</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTaskComments(System.Int32)">
+            <summary>
+            Returns the list of the comments for the task with the ID specified in the request
+            </summary>
+            <short>
+            Task comments
+            </short>
+            <category>Comments</category>
+            <param name="taskid">Task ID</param>
+            <returns>List of comments</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.AddTaskComments(System.Int32,System.String,System.Guid)">
+            <summary>
+            Adds the comments for the selected task with the comment text and parent comment ID specified in the request
+            </summary>
+            <short>
+            Add task comment
+            </short>
+            <category>Comments</category>
+            <param name="taskid">Task ID</param>
+            <param name="content">Comment text</param>
+            <param name="parentid">Parent comment ID</param>
+            <returns>List of comments</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.NotifyTaskResponsible(System.Int32)">
+            <summary>
+            Notify the responsible for the task with the ID specified in the request about the task
+            </summary>
+            <short>
+            Notify task responsible
+            </short>
+            <category>Tasks</category>
+            <returns>Task</returns>
+            <param name="taskid">Task ID</param>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.SubscribeToTask(System.Int32)">
+            <summary>
+            Subscribe to notifications about the actions performed with the task with the ID specified in the request
+            </summary>
+            <short>
+            Subscribe to task action
+            </short>
+            <category>Tasks</category>
+            <returns>Task</returns>
+            <param name="taskid">Task ID</param>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.IsSubscribeToTask(System.Int32)">
+            <summary>
+            Checks subscription to notifications about the actions performed with the task with the ID specified in the request
+            </summary>
+            <short>
+            Check subscription to task action
+            </short>
+            <category>Tasks</category>
+            <param name="taskid">Task ID</param>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.AddLink(System.Int32,System.Int32,ASC.Projects.Core.Domain.TaskLinkType)">
+            <summary>
+            Add link between dependenceTaskId and parentTaskId
+            </summary>
+            <short>
+            Add link 
+            </short>
+            <category>Tasks</category>
+            <param name="parentTaskId">Parent Task ID</param>
+            <param name="dependenceTaskId">Dependent Task ID</param>
+            <param name="linkType">Link Type</param>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.RemoveLink(System.Int32,System.Int32)">
+            <summary>
+            Remove link between dependenceTaskId and parentTaskId
+            </summary>
+            <short>
+            Remove link 
+            </short>
+            <category>Tasks</category>
+            <param name="dependenceTaskId">Dependent Task ID</param>
+            <param name="parentTaskId">Parent Task ID</param>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.AddSubtask(System.Int32,System.Guid,System.String)">
+            <summary>
+            Creates the subtask with the selected title and responsible within the parent task specified in the request
+            </summary>
+            <short>
+            Create subtask
+            </short>
+            <category>Tasks</category>
+            <param name="taskid">Parent task ID</param>
+            <param name="responsible">Subtask responsible</param>
+            <param name="title">Subtask title</param>
+            <returns>Task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.CopySubtask(System.Int32,System.Int32)">
+            <summary>
+            Copy subtask
+            </summary>
+            <short>
+            Copy subtask
+            </short>
+            <category>Tasks</category>
+            <param name="taskid">Task ID</param>
+            <param name="subtaskid">Subtask ID</param>
+            <returns>New task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateSubtask(System.Int32,System.Int32,System.Guid,System.String)">
+            <summary>
+            Updates the subtask with the selected title and responsible with the subtask ID specified in the request
+            </summary>
+            <short>
+            Update subtask
+            </short>
+            <category>Tasks</category>
+            <param name="taskid">Task ID</param>
+            <param name="subtaskid">Subtask ID</param>
+            <param name="responsible">Subtask responsible</param>
+            <param name="title">Subtask title</param>
+            <returns>Task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteSubtask(System.Int32,System.Int32)">
+            <summary>
+            Deletes the selected subtask from the parent task with the ID specified in the request
+            </summary>
+            <short>
+            Delete subtask
+            </short>
+            <category>Tasks</category>
+            <param name="taskid">Task ID</param>
+            <param name="subtaskid">Subtask ID</param>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateSubtask(System.Int32,System.Int32,ASC.Projects.Core.Domain.TaskStatus)">
+            <summary>
+            Updates the selected subtask status in the parent task with the ID specified in the request
+            </summary>
+            <short>
+            Update subtask status
+            </short>
+            <category>Tasks</category>
+            <param name="taskid">Task ID</param>
+            <param name="subtaskid">Subtask ID</param>
+            <param name="status">Status of task. Can be one of: open|closed|disable|unclassified</param>
+            <returns>Updated task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetComment(System.Guid)">
+            <summary>
+            Returns the information about the comment with the ID specified in the request
+            </summary>
+            <short>
+            Get comment
+            </short>
+            <category>Comments</category>
+            <param name="commentid">Comment ID</param>
+            <returns>Comment</returns>        
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectCommentPreview(System.String,System.String)">
+            <summary>
+            Get preview
+            </summary>
+            <short>
+            Get preview
+            </short>
+            <category>Comments</category>
+            <param name="htmltext">html to create preview</param>
+            <param name="commentid">guid of editing comment or empty string if comment is new</param>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.RemoveProjectComment(System.String)">
+            <summary>
+            Remove comment with the id specified in the request
+            </summary>
+            <short>Remove comment</short>
+            <section>Comments</section>
+            <param name="commentid">Comment ID</param>
+            <returns>Comment id</returns>
+            <category>Comments</category>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.AddProjectComment(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="parentcommentid"></param>
+            <param name="entityid"></param>
+            <param name="content"></param>
+            <param name="type"></param>
+            <category>Comments</category>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateComment(System.String,System.String)">
+             <summary>
+             
+             </summary>
+             <param name="commentid"></param>
+             <param name="content"></param>
+            <category>Comments</category>
+             <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetAllTags">
+            <summary>
+            Returns the list of all available project tags
+            </summary>
+            <short>
+            Project tags
+            </short>
+            <category>Tags</category>
+            <returns>List of tags</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.CreateNewTag(System.String)">
+            <summary>
+            Creates new tag
+            </summary>
+            <short>
+            Tag
+            </short>
+            <category>Tags</category>
+            <returns>Created tag</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectsByTags(System.String)">
+            <summary>
+            Returns the detailed list of all projects with the specified tag
+            </summary>
+            <short>
+            Project by tag
+            </short>
+            <category>Tags</category>
+            <param name="tag">Tag name</param>
+            <returns>List of projects</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTagsByName(System.String)">
+            <summary>
+            Returns the list of all tags like the specified tag name
+            </summary>
+            <short>
+            Tags by tag name
+            </short>
+            <category>Tags</category>
+            <param name="tagName">Tag name</param>
+            <returns>List of tags</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetMilestones">
+            <summary>
+            Returns the list of all upcoming milestones within all portal projects
+            </summary>
+            <short>
+            Upcoming milestones
+            </short>
+            <category>Milestones</category>
+            <returns>List of milestones</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetMilestonesByFilter(System.Int32,System.Int32,System.Nullable{ASC.Projects.Core.Domain.MilestoneStatus},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Nullable{System.Guid},System.Int32,System.Boolean,System.Guid)">
+            <summary>
+            Returns the list of all milestones matching the filter with the parameters specified in the request
+            </summary>
+            <short>
+            Milestones by filter
+            </short>
+            <category>Milestones</category>
+            <param name="projectid" optional="true">Project ID</param>
+            <param name="tag" optional="true">Project tag</param>
+            <param name="status" optional="true">Milstone status/ Can be open or closed</param>
+            <param name="deadlineStart" optional="true">Minimum value of task deadline</param>
+            <param name="deadlineStop" optional="true">Maximum value of task deadline</param>
+            <param name="taskResponsible" optional="true">Responsible for the task in milestone GUID</param>
+            <param name="lastId">Last milestone ID</param>
+            <param name="myProjects">Miletone in my Projects</param>
+            <param name="milestoneResponsible">Responsible for the milestone GUID</param>
+            <returns>List of milestones</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetLateMilestones">
+            <summary>
+            Returns the list of all overdue milestones in the portal projects
+            </summary>
+            <short>
+            Overdue milestones
+            </short>
+            <category>Milestones</category>
+            <returns>List of milestones</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetMilestonesByDeadLineFull(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Returns the list of all milestones due on the date specified in the request
+            </summary>
+            <short>
+            Milestones by full date
+            </short>
+            <category>Milestones</category>
+            <param name="year">Deadline year</param>
+            <param name="month">Deadline month</param>
+            <param name="day">Deadline day</param>
+            <returns>List of milestones</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetMilestonesByDeadLineMonth(System.Int32,System.Int32)">
+            <summary>
+            Returns the list of all milestones due in the month specified in the request
+            </summary>
+            <short>
+            Milestones by month
+            </short>
+            <category>Milestones</category>
+            <param name="year">Deadline year</param>
+            <param name="month">Deadline month</param>
+            <returns>List of milestones</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetMilestoneById(System.Int32)">
+            <summary>
+            Returns the list with the detailed information about the milestone with the ID specified in the request
+            </summary>
+            <short>
+            Get milestone
+            </short>
+            <category>Milestones</category>
+            <param name="id">Milestone ID</param>
+            <returns>Milestone</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetMilestoneTasks(System.Int32)">
+            <summary>
+            Returns the list of all tasks within the milestone with the ID specified in the request
+            </summary>
+            <short>
+            Get milestone tasks 
+            </short>
+            <category>Milestones</category>
+            <param name="id">Milestone ID </param>
+            <returns>Tasks list</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateMilestone(System.Int32,System.String,ASC.Specific.ApiDateTime,System.Nullable{System.Boolean},ASC.Projects.Core.Domain.MilestoneStatus,System.Nullable{System.Boolean},System.String,System.Int32,System.Guid,System.Boolean)">
+            <summary>
+            Updates the selected milestone changing the milestone parameters (title, deadline, status, etc.) specified in the request
+            </summary>
+            <short>
+            Update milestone
+            </short>
+            <category>Milestones</category>
+            <param name="id">Milestone ID</param>
+            <param name="title">Title</param>
+            <param name="deadline">Deadline</param>
+            <param name="isKey">Is key or not</param>
+            <param name="status">Status</param>
+            <param name="isNotify">Remind me 48 hours before the due date</param>
+            <param name="description">Milestone description</param>
+            <param name="projectID">Project ID</param>
+            <param name="responsible">Milestone responsible</param>
+            <param name="notifyResponsible">Notify responsible</param>
+            <returns>Updated milestone</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <example>
+            <![CDATA[
+            Sending data in application/json:
+            
+            {
+                title:"New title",
+                deadline:"2011-03-23T14:27:14",
+                isKey:false,
+                status:"Open"
+            }
+            ]]>
+            </example>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateMilestone(System.Int32,ASC.Projects.Core.Domain.MilestoneStatus)">
+            <summary>
+            Updates the status of the milestone with the ID specified in the request
+            </summary>
+            <short>
+            Update milestone status
+            </short>
+            <category>Milestones</category>
+            <param name="id">Milestone ID</param>
+            <param name="status">Status</param>
+            <returns>Updated milestone</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <example>
+            <![CDATA[
+            Sending data in application/json:
+            
+            {
+                status:"Open"
+            }
+            ]]>
+            </example>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteMilestone(System.Int32)">
+            <summary>
+            Deletes the milestone with the ID specified in the request
+            </summary>
+            <short>
+            Delete milestone
+            </short>
+            <category>Milestones</category>
+            <param name="id">Milestone ID</param>
+            <returns>Deleted milestone</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteMilestones(System.Int32[])">
+            <summary>
+            Deletes milestones with the IDs specified in the request
+            </summary>
+            <short>
+            Delete milestones
+            </short>
+            <category>Milestones</category>
+            <param name="ids">Milestones ID</param>
+            <returns>Deleted milestones</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTaskTimeByFilter(System.Int32,System.Boolean,System.Nullable{System.Int32},System.Boolean,System.Int32,System.Guid,System.Guid,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Nullable{ASC.Projects.Core.Domain.PaymentStatus})">
+            <summary>
+            Returns the list with the detailed information about all the time spent matching the filter parameters specified in the request
+            </summary>
+            <short>
+            Get time spent by filter
+            </short>
+            <category>Time</category>
+            <param name="projectid" optional="true"> Project Id</param>
+            <param name="tag" optional="true">Project Tag</param>
+            <param name="departament" optional="true">Departament GUID</param>
+            <param name="participant" optional="true">Participant GUID</param>
+            <param name="createdStart" optional="true">Minimum value of create time</param>
+            <param name="createdStop" optional="true">Maximum value of create time</param>
+            <param name="lastId">Last time spent ID</param>
+            <param name="myProjects">Tasks time in My Projects</param>
+            <param name="myMilestones">Tasks time in My Milestones</param>
+            <param name="milestone" optional="true">Milestone ID</param>
+            <param name="status" optional="true">Payment status</param>
+            <returns>List of time spent</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTotalTaskTimeByFilter(System.Int32,System.Boolean,System.Nullable{System.Int32},System.Boolean,System.Int32,System.Guid,System.Guid,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Nullable{ASC.Projects.Core.Domain.PaymentStatus})">
+            <summary>
+            Returns the total time spent matching the filter parameters specified in the request
+            </summary>
+            <short>
+            Get total time spent by tilter
+            </short>
+            <category>Time</category>
+            <param name="projectid" optional="true"> Project ID</param>
+            <param name="tag" optional="true">Project tag</param>
+            <param name="departament" optional="true">Departament GUID</param>
+            <param name="participant" optional="true">Participant GUID</param>
+            <param name="createdStart" optional="true">Minimum value of create time</param>
+            <param name="createdStop" optional="true">Maximum value of create time</param>
+            <param name="lastId">Last time spent ID</param>
+            <param name="myProjects">Tasks time in My Projects</param>
+            <param name="myMilestones">Tasks time in My Milestones</param>
+            <param name="milestone" optional="true">Milestone ID</param>
+            <param name="status" optional="true">Payment status</param>
+            <returns>Total time spent</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTaskTime(System.Int32)">
+            <summary>
+            Returns the time spent on the task with the ID specified in the request
+            </summary>
+            <short>
+            Get time spent
+            </short>
+            <category>Time</category>
+            <param name="taskid">Task ID</param>
+            <returns></returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.AddTaskTime(System.Int32,System.String,System.DateTime,System.Guid,System.Single,System.Int32)">
+            <summary>
+            Adds the time to the selected task with the time parameters specified in the request
+            </summary>
+            <short>
+            Add task time
+            </short>
+            <category>Time</category>
+            <param name="taskid">Task ID</param>
+            <param name="note">Note</param>
+            <param name="date">Date</param>
+            <param name="personId">Person that spends time</param>
+            <param name="hours">Hours spent</param>
+            <param name="projectId">Project ID</param>
+            <returns>Created time</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateTime(System.Int32,System.String,System.DateTime,System.Guid,System.Single)">
+            <summary>
+            Updates the time for the selected task with the time parameters specified in the request
+            </summary>
+            <short>
+            Update task time
+            </short>
+            <category>Time</category>
+            <param name="timeid">ID of time spent</param>
+            <param name="note">Note</param>
+            <param name="date">Date</param>
+            <param name="personId">Person that spends time</param>
+            <param name="hours">Hours spent</param>
+            <returns>Created time</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateTimes(System.Int32[],ASC.Projects.Core.Domain.PaymentStatus)">
+            <summary>
+            Updates the time status of payment
+            </summary>
+            <short>
+            Updates the time status of payment
+            </short>
+            <category>Time</category>
+            <param name="timeids">List IDs of time spent</param>
+            <param name="status">Status</param>
+            <returns>Created time</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteTaskTimes(System.Int32[])">
+            <summary>
+            Deletes the times from the tasks with the ID specified in the request
+            </summary>
+            <short>
+            Delete time spents
+            </short>
+            <category>Time</category>
+            <param name="timeids">IDs of time spents</param>
+            <returns></returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="P:ASC.Api.Projects.ProjectApi.Name">
+            <summary>
+            Api name entry
+            </summary>
+        </member>
+    </members>
+</doc>

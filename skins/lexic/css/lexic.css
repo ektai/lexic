@@ -1,0 +1,163 @@
+.studio-top-panel {
+    background: #4287C7;
+    color: #ffffff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    
+}
+.docs-default-logo span {
+    display: none !important;
+}
+panel:not(.try-welcome-top) .studio-top-logo .top-logo img {
+    max-height: 23px;
+    width: 141px;
+}
+
+.studio-top-panel .top-item-box .inner-text svg {
+    width: 16px;
+    height: 16px;
+    fill: #ffffff;
+}
+.studio-top-panel .top-item-box .inner-text svg {
+    width: 18px;
+    height: 18px;
+    fill: #ffffff;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+.product-menu .product-cur-link{
+    color: #ffffff;
+}
+.studio-top-panel:not(.try-welcome-top) .studio-top-logo .top-logo img{
+    max-height: 30px;
+    margin-top: 0px;
+}
+.page-menu .menu-actions .menu-main-button{
+    background-color: #4287C7;
+}
+.dashboard-center-box .header{
+    background-color: #4287C7;
+}
+.button, .button:visited, .button:hover, .button:active{
+    background-color: #4287C7;
+}
+a.button.blue {
+    background: #4287C7;
+}
+.button.blue:active {
+    background-color: #4287C7;
+}
+.fc-state-active, .fc-state-active .fc-button-inner{
+    border-color: #4287C7;
+    background-color: #4287C7;
+}
+.fc-grid .fc-today .fc-day-number>span{
+    background-color: #4287C7;  
+}
+.top-item-box.tariffs {
+    display: none !important;
+}
+a[href="/controlpanel/"] {
+    display: none !important;
+  }
+  [href~="/controlpanel/"] {
+    display: none !important;
+  }
+  [class|="menu-item none-sub-list add-block"] {
+    display: none !important;
+  }
+  [class|="menu-item none-sub-list support add-block"] {
+    display: none !important;
+  }
+  [class|="menu-item none-sub-list userforum add-block"] {
+    display: none !important;
+  }
+  [class|="menu-item none-sub-list video-guides add-block"] {
+    display: none !important;
+  }
+  li[id="menuTemplates"] {
+    display: none !important;
+  }
+  li[id="menuGanttChart"] {
+    display: none !important;
+  }
+  a[href="/Products/Projects/"] {
+    display: none !important;
+  }
+  a[href="/Products/CRM/"] {
+    display: none !important;
+  }
+  a[href="/Products/People/"] {
+    display: none !important;
+  }
+  a[href="/addons/mail/"] {
+    
+  }
+
+  .studio-top-panel {
+    background: #4287C7;
+    color: #ffffff;
+}
+.docs-default-logo {
+   
+}
+panel:not(.try-welcome-top) .studio-top-logo .top-logo img {
+    max-height: 23px;
+    width: 141px;
+}
+
+.studio-top-panel .top-item-box .inner-text svg {
+    width: 16px;
+    height: 16px;
+    fill: #ffffff;
+}
+.studio-top-panel .top-item-box .inner-text svg {
+    width: 18px;
+    height: 18px;
+    fill: #ffffff;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+.product-menu .product-cur-link{
+    color: #ffffff;
+}
+.studio-top-panel:not(.try-welcome-top) .studio-top-logo .top-logo img{
+    max-height: 30px;
+    margin-top: -0px;
+}
+.page-menu .menu-actions .menu-main-button{
+    background-color: #4287C7;
+}
+.dashboard-center-box .header{
+    background-color: #4287C7;
+}
+.button, .button:visited, .button:hover, .button:active{
+    background-color: #4287C7;
+}
+a.button.blue {
+    background: #4287C7;
+}
+.button.blue:active {
+    background-color: #4287C7;
+}
+.fc-state-active, .fc-state-active .fc-button-inner{
+    border-color: #4287C7;
+    background-color: #4287C7;
+}
+.fc-grid .fc-today .fc-day-number>span{
+    background-color: #4287C7;  
+}
+a.link.header.product{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    margin: 10px;
+    padding: 5px;
+}
+a.link.header.product:hover{
+    box-shadow: 0 14px 128px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.greating-modules-block .docs-default-page {
+    margin: 5% 0% 5% 24% !important;
+    width: 600px !important;
+    z-index: 222222 !important;
+}

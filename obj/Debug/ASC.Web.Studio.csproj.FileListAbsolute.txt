@@ -1,0 +1,172 @@
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\callback.htm
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.Studio.dll.config
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.Studio.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.Studio.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AjaxPro.2.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Antlr3.Runtime.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.Core.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.SecurityToken.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\dotless.Core.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\DotNetZip.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Authenticator.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Protobuf.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\HtmlAgilityPack.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Microsoft.Web.Infrastructure.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\MySql.Data.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Newtonsoft.Json.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\PhoneNumbers.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\RedisSessionProvider.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\StackExchange.Redis.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\StackExchange.Redis.Extensions.Core.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\StackExchange.Redis.Extensions.LegacyConfiguration.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Net.Http.Formatting.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Web.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Web.Http.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Web.Http.WebHost.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Web.Optimization.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\WebGrease.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Autofac.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Novell.Directory.LDAP.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Mono.Security.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\NLog.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\log4net.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\NVelocity.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ARSoft.Tools.Net.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Cloud.Storage.V1.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Apis.Storage.v1.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\openstacknet.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.S3.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.CloudFront.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\SelectelSharp.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Apis.Auth.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Apis.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Api.Gax.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Textile.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Nest.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Elasticsearch.Net.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\UAParser.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\DotNetOpenAuth.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Twitterizer2.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\JWT.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Twilio.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\MailKit.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.SimpleEmail.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Apis.Core.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AjaxMin.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Memory.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Threading.Channels.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Threading.Tasks.Extensions.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.IO.Pipelines.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Pipelines.Sockets.Unofficial.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Buffers.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Api.Gax.Rest.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Microsoft.IdentityModel.Tokens.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Microsoft.IdentityModel.Logging.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.ActiveDirectory.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Common.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Data.Storage.Migration.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Data.Storage.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.IPSecurity.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Notify.Textile.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.ElasticSearch.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Feed.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.MessagingSystem.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.FederatedLogin.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Thrdparty.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.VoipService.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Antlr3.Runtime.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Core.Common.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.Core.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.Core.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.Core.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.SecurityToken.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.SecurityToken.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\dotless.Core.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\HtmlAgilityPack.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\MimeKit.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\MySql.Data.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Newtonsoft.Json.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\StackExchange.Redis.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Net.Http.Formatting.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Web.Http.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Web.Http.WebHost.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Web.Optimization.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\DotNetZip.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\DotNetZip.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Protobuf.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Autofac.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\NLog.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\log4net.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\NVelocity.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ARSoft.Tools.Net.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Cloud.Storage.V1.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Cloud.Storage.V1.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Apis.Storage.v1.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\openstacknet.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\openstacknet.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.S3.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.S3.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.CloudFront.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.CloudFront.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Apis.Auth.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Apis.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Api.Gax.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Api.Gax.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Nest.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Elasticsearch.Net.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\UAParser.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\DotNetOpenAuth.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Twitterizer2.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Twilio.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\MailKit.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.SimpleEmail.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\AWSSDK.SimpleEmail.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Apis.Core.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Memory.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Threading.Channels.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Threading.Tasks.Extensions.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.IO.Pipelines.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Pipelines.Sockets.Unofficial.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Buffers.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Api.Gax.Rest.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Google.Api.Gax.Rest.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Microsoft.IdentityModel.Tokens.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\Microsoft.IdentityModel.Logging.xml
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.csprojResolveAssemblyReference.cache
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.AuditResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.ChatResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.CustomModeResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.StudioCountriesResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.FeedResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.MonitoringResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.Resource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.ResourceJS.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.UserControlsCommonResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.Core.Notify.WebPatternResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.Core.Notify.WebstudioNotifyPatternResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.Core.Users.NamingPeopleResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.WhiteLabelResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.csproj.GenerateResource.Cache
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.pdb
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.csprojResolveAssemblyReference.cache
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.AuditResource.resources
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.ChatResource.resources
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.CustomModeResource.resources
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.StudioCountriesResource.resources
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.FeedResource.resources
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.MonitoringResource.resources
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.Resource.resources
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.ResourceJS.resources
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.UserControlsCommonResource.resources
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.Core.Notify.WebPatternResource.resources
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.Core.Notify.WebstudioNotifyPatternResource.resources
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.Core.Users.NamingPeopleResource.resources
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.PublicResources.WhiteLabelResource.resources
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.csproj.GenerateResource.Cache
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.dll
+C:\Users\asifs\Documents\My Web Sites\ASC.Web.Studio\obj\Debug\ASC.Web.Studio.pdb

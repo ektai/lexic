@@ -1,0 +1,9 @@
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\callback.htm
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.People.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.People.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\People\obj\Debug\ASC.Web.People.csprojResolveAssemblyReference.cache
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\People\obj\Debug\ASC.Web.People.Resources.PeopleJSResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\People\obj\Debug\ASC.Web.People.Resources.PeopleResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\People\obj\Debug\ASC.Web.People.csproj.GenerateResource.Cache
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\People\obj\Debug\ASC.Web.People.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\People\obj\Debug\ASC.Web.People.pdb

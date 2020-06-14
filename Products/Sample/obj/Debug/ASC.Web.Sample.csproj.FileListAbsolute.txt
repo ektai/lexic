@@ -1,0 +1,8 @@
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\callback.htm
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.Sample.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.Sample.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\Sample\obj\Debug\ASC.Web.Sample.csprojResolveAssemblyReference.cache
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\Sample\obj\Debug\ASC.Web.Sample.Resources.SampleResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\Sample\obj\Debug\ASC.Web.Sample.csproj.GenerateResource.Cache
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\Sample\obj\Debug\ASC.Web.Sample.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\Sample\obj\Debug\ASC.Web.Sample.pdb

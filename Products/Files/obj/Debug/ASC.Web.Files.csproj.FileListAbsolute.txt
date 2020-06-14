@@ -1,0 +1,11 @@
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\callback.htm
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.Files.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\bin\ASC.Web.Files.pdb
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\Files\obj\Debug\ASC.Web.Files.csprojResolveAssemblyReference.cache
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\Files\obj\Debug\ASC.Web.Files.Resources.FilesCommonResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\Files\obj\Debug\ASC.Web.Files.Resources.FilesJSResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\Files\obj\Debug\ASC.Web.Files.Resources.FilesUCResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\Files\obj\Debug\ASC.Web.Files.Services.NotifyService.FilesPatternResource.resources
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\Files\obj\Debug\ASC.Web.Files.csproj.GenerateResource.Cache
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\Files\obj\Debug\ASC.Web.Files.dll
+C:\work\lexic\CommunityServer\web\studio\ASC.Web.Studio\Products\Files\obj\Debug\ASC.Web.Files.pdb

@@ -1,0 +1,496 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASC.Api.Settings</name>
+    </assembly>
+    <members>
+        <member name="T:ASC.Api.Settings.SettingsApi">
+            <summary>
+             Portal settings
+            </summary>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetSmtpSettings">
+            <summary>
+            Returns current portal SMTP settings
+            </summary>
+            <short>
+            Get SMTP settings
+            </short>
+            <returns>SmtpSettings data</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveSmtpSettings(ASC.Api.Settings.Smtp.SmtpSettingsWrapper)">
+            <summary>
+            Save SMTP settings for current portal
+            </summary>
+            <short>
+            Save SMTP settings
+            </short>
+            <param name="smtpSettings">SMTP settings data</param>
+            <returns>SmtpSettings data</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.ResetSmtpSettings">
+            <summary>
+            Reset SMTP settings for current portal
+            </summary>
+            <short>
+            Reset SMTP settings
+            </short>
+            <returns>SmtpSettings data</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.TestSmtpSettings">
+            <summary>
+            Test SMTP settings for current portal (send test message to user email)
+            </summary>
+            <short>
+            Test SMTP settings
+            </short>
+            <returns>SmtpOperationStatus data</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetSmtpOperationStatus">
+            <summary>
+            Returns SMTP test process status
+            </summary>
+            <short>
+            Get SMTP test process status
+            </short>
+            <returns>SmtpOperationStatus object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetSsoSettingsV2">
+            <summary>
+            Returns current portal SSO settings
+            </summary>
+            <short>
+            Get SSO settings
+            </short>
+            <returns>SsoSettingsV2 object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetDefaultSsoSettingsV2">
+            <summary>
+            Returns default portal SSO settings
+            </summary>
+            <short>
+            Get default SSO settings
+            </short>
+            <returns>SsoSettingsV2 object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetSsoSettingsV2Constants">
+            <summary>
+            Returns SSO settings constants
+            </summary>
+            <short>
+            Get SSO settings constants
+            </short>
+            <returns>object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveSsoSettingsV2(System.String)">
+            <summary>
+            Save SSO settings for current portal
+            </summary>
+            <short>
+            Save SSO settings
+            </short>
+            <param name="serializeSettings">serialized SsoSettingsV2 object</param>
+            <returns>SsoSettingsV2 object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.ResetSsoSettingsV2">
+            <summary>
+            Reset SSO settings for current portal
+            </summary>
+            <short>
+            Reset SSO settings
+            </short>
+            <returns>SsoSettingsV2 object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetLdapSettings">
+            <summary>
+            Returns current portal LDAP settings
+            </summary>
+            <short>
+            Get LDAP settings
+            </short>
+            <returns>LDAPSupportSettings object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetLdapCronSettings">
+            <summary>
+            Returns current portal LDAP AutoSync cron expression if any
+            </summary>
+            <short>
+            Get LDAP AutoSync Cron expression
+            </short>
+            <returns>string or null</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SetLdapCronSettings(System.String)">
+            <summary>
+            Sets current portal LDAP AutoSync cron expression
+            </summary>
+            <short>
+            Sets LDAP AutoSync Cron expression
+            </short>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SyncLdap">
+            <summary>
+            Start sync users and groups process by LDAP
+            </summary>
+            <short>
+            Sync LDAP
+            </short>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.TestLdapSync">
+            <summary>
+            Starts the process of collecting preliminary changes on the portal according to the selected LDAP settings
+            </summary>
+            <short>
+            Sync LDAP
+            </short>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveLdapSettings(System.String,System.Boolean)">
+            <summary>
+            Save LDAP settings and start import/sync users and groups process by LDAP
+            </summary>
+            <short>
+            Save LDAP settings
+            </short>
+            <param name="settings">LDAPSupportSettings serialized string</param>
+            <param name="acceptCertificate">Flag permits errors of checking certificates</param>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.TestLdapSave(System.String,System.Boolean)">
+            <summary>
+            Starts the process of collecting preliminary changes on the portal according to the LDAP settings
+            </summary>
+            <short>
+            Save LDAP settings
+            </short>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetLdapOperationStatus">
+            <summary>
+            Returns LDAP sync process status
+            </summary>
+            <short>
+            Get LDAP sync process status
+            </short>
+            <returns>LDAPSupportSettingsResult object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetDefaultLdapSettings">
+            <summary>
+            Returns LDAP default settings
+            </summary>
+            <short>
+            Get LDAP default settings
+            </short>
+            <returns>LDAPSupportSettings object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetSettings">
+            <summary>
+             Returns the list of all available portal settings with the current values for each one
+            </summary>
+            <short>
+             Portal settings
+            </short>
+            <returns>Settings</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetQuotaUsed">
+            <summary>
+             Returns space usage quota for portal with the space usage of each module
+            </summary>
+            <short>
+             Space usage
+            </short>
+            <returns>Space usage and limits for upload</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.RecalculateQuota">
+            <summary>
+             Start Recalculate Quota Task
+            </summary>
+            <short>
+             Recalculate Quota 
+            </short>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.CheckRecalculateQuota">
+            <summary>
+             Check Recalculate Quota Task
+            </summary>
+            <short>
+             Check Recalculate Quota Task
+            </short>
+            <returns>Check Recalculate Quota Task Status</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetBuildVersions">
+            <summary>
+            Get build version
+            </summary>
+            <visible>false</visible>
+            <returns>Current lexic, editor, mailserver versions</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetVersions">
+            <summary>
+            Get list of availibe portal versions including current version
+            </summary>
+            <short>
+            Portal versions
+            </short>
+            <visible>false</visible>
+            <returns>List of availibe portal versions including current version</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SetVersion(System.Int32)">
+            <summary>
+            Set current portal version to the one with the ID specified in the request
+            </summary>
+            <short>
+            Change portal version
+            </short>
+            <param name="versionId">Version ID</param>
+            <visible>false</visible>
+            <returns>List of availibe portal versions including current version</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetWebItemSecurityInfo(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Returns security settings about product, module or addons
+            </summary>
+            <short>
+            Get security settings
+            </short>
+            <param name="ids">Module ID list</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetEnabledModules">
+            <summary>
+            Return list of enabled modules
+            </summary>
+            <short>
+            Enabled modules
+            </short>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetPasswordSettings">
+            <summary>
+            Get portal password settings
+            </summary>
+            <short>
+            Password settings
+            </short>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SetWebItemSecurity(System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Set security settings for product, module or addons
+            </summary>
+            <short>
+            Set security settings
+            </short>
+            <param name="id">Module ID</param>
+            <param name="enabled">Enabled</param>
+            <param name="subjects">User (Group) ID list</param>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SetAccessToWebItems(System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.Boolean}})">
+            <summary>
+            Set access to products, modules or addons
+            </summary>
+            <short>
+            Set access
+            </short>
+            <param name="items"></param>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetLogo">
+            <summary>
+            Get portal logo image URL
+            </summary>
+            <short>
+            Portal logo
+            </short>
+            <returns>Portal logo image URL</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveWhiteLabelSettings(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}})">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveWhiteLabelSettingsFromFiles(System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelSizes">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogos(System.Boolean)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogoText">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.RestoreWhiteLabelOptions">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetIpRestrictions">
+            <summary>
+            Get portal ip restrictions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveIpRestrictions(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            save new portal ip restrictions
+            </summary>
+            <param name="ips">ip restrictions</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.UpdateIpRestrictionsSettings(System.Boolean)">
+            <summary>
+            update ip restrictions settings
+            </summary>
+            <param name="enable">enable ip restrictions settings</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.UpdateTipsSettings(System.Boolean)">
+            <summary>
+            update tips settings
+            </summary>
+            <param name="show">show tips for user</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.UpdateTipsSubscription">
+            <summary>
+            change tips&amp;tricks subscription
+            </summary>
+            <returns>subscription state</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.CompleteWizard">
+            <summary>
+            Complete Wizard
+            </summary>
+            <returns>WizardSettings</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.TfaSettings(System.String)">
+            <summary>
+            Update two-factor authentication settings
+            </summary>
+            <param name="type">sms, app or none</param>
+            <returns>true if success</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.TfaAppGetCodes">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.TfaAppRequestNewCodes">
+            <summary>
+            Requests new backup codes for two-factor application
+            </summary>
+            <returns>New backup codes</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.TfaAppNewApp(System.Guid)">
+            <summary>
+            Unlinks current two-factor auth application
+            </summary>
+            <returns>Login url</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.CloseWelcomePopup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveColorTheme(System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.TimaAndLanguage(System.String,System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveDefaultPageSettings(System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.RefreshLicense">
+            <summary>
+            Refresh license
+            </summary>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetCustomNavigationItems">
+            <summary>
+            Get Custom Navigation Items
+            </summary>
+            <returns>CustomNavigationItem List</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetCustomNavigationItemSample">
+            <summary>
+            Get Custom Navigation Items Sample
+            </summary>
+            <returns>CustomNavigationItem Sample</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetCustomNavigationItem(System.Guid)">
+            <summary>
+            Get Custom Navigation Item by Id
+            </summary>
+            <param name="id">Item id</param>
+            <returns>CustomNavigationItem</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.CreateCustomNavigationItem(ASC.Web.Studio.Core.CustomNavigationItem)">
+            <summary>
+            Add Custom Navigation Item
+            </summary>
+            <param name="item">Item</param>
+            <returns>CustomNavigationItem</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.DeleteCustomNavigationItem(System.Guid)">
+            <summary>
+            Delete Custom Navigation Item by Id
+            </summary>
+            <param name="id">Item id</param>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.UpdateEmailActivationSettings(System.Boolean)">
+            <summary>
+            update email activation settings
+            </summary>
+            <param name="show">show email activation panel for user</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetCompanyWhiteLabelSettings">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetSpaceUsageStatistics(System.Guid)">
+            <summary>
+            Get WebItem Space Usage Statistics
+            </summary>
+            <param name="id">WebItem id</param>
+            <returns>UsageSpaceStatItemWrapper List</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetVisitStatistics(ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
+            <summary>
+            Get User Visit Statistics
+            </summary>
+            <param name="fromDate">From Date</param>
+            <param name="toDate">To Date</param>
+            <returns>ChartPointWrapper List</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetAllStorages">
+            <summary>
+            Get Storage
+            </summary>
+            <returns>Consumer</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetStorageProgress">
+            <summary>
+            Get Storage
+            </summary>
+            <returns>Consumer</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.UpdateStorage(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}})">
+            <summary>
+            Get Storage
+            </summary>
+            <returns>Consumer</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetAllCdnStorages">
+            <summary>
+            Get Storage
+            </summary>
+            <returns>Consumer</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.UpdateCdn(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}})">
+            <summary>
+            Get Storage
+            </summary>
+            <returns>Consumer</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetAllBackupStorages">
+            <summary>
+            Get Storage
+            </summary>
+            <returns>Consumer</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,566 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASC.Api.Employee</name>
+    </assembly>
+    <members>
+        <member name="T:ASC.Api.Employee.EmployeeApi">
+            <summary>
+            User profiles access
+            </summary>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetMe">
+            <summary>
+            Returns the detailed information about the current user profile
+            </summary>
+            <short>
+            My profile
+            </short>
+            <returns>Profile</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetAll">
+            <summary>
+            Returns the list of profiles for all portal users
+            </summary>
+            <short>
+            All profiles
+            </short>
+            <returns>List of profiles</returns>
+             <remarks>This method returns a partial profile. Use more specific method to get full profile</remarks>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetById(System.String)">
+            <summary>
+            Returns the detailed information about the profile of the user with the name specified in the request
+            </summary>
+            <short>
+            Specific profile
+            </short>
+            <param name="username">User name</param>
+            <returns>User profile</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetByEmail(System.String)">
+            <summary>
+            Returns the detailed information about the profile of the user with the name specified in the request
+            </summary>
+            <short>
+            Specific profile
+            </short>
+            <param name="email">User email</param>
+            <returns>User profile</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetSearch(System.String)">
+            <summary>
+            Returns the list of profiles for all portal users matching the search query
+            </summary>
+            <short>
+            Search users
+            </short>
+            <param name="query">Query</param>
+            <returns>List of users</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetPeopleSearch(System.String)">
+            <summary>
+            Returns the list of users matching the search criteria
+            </summary>
+            <short>
+            User search
+            </short>
+            <param name="query">Search text</param>
+            <returns>User list</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetAdvanced(ASC.Core.Users.EmployeeStatus,System.String)">
+            <summary>
+            Returns the list of users matching the status filter and text search
+            </summary>
+            <short>
+            User search by filter
+            </short>
+            <param name="status">User status</param>
+            <param name="query">Search text</param>
+            <returns>User list</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.SaveUsers(System.String,System.Boolean)">
+            <summary>
+            Adds a new portal user from import with the first and last name, email address
+            </summary>
+            <short>
+            Add new import user
+            </short>
+            <param name="userList">The list of users to add</param>
+            <param name="importUsersAsCollaborators" optional="true">Add users as guests (bool type: false|true)</param>
+            <returns>Newly created users</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetFullByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean})">
+            <summary>
+               Returns the list of users matching the filter with the parameters specified in the request
+            </summary>
+            <short>
+               User search by extended filter
+            </short>
+            <param optional="true" name="employeeStatus">User status</param>
+            <param optional="true" name="groupId">Group ID</param>
+            <param optional="true" name="activationStatus">Activation status</param>
+            <param optional="true" name="employeeType">User type</param>
+             <param optional="true" name="isAdministrator">Administrator(bool type)</param>
+            <returns>
+               User list
+            </returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetSimpleByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean})">
+            <summary>
+               Returns the list of users matching the filter with the parameters specified in the request
+            </summary>
+            <short>
+               User search by extended filter
+            </short>
+            <param optional="true" name="employeeStatus">User status</param>
+            <param optional="true" name="groupId">Group ID</param>
+            <param optional="true" name="activationStatus">Activation status</param>
+            <param optional="true" name="employeeType">User type</param>
+             <param optional="true" name="isAdministrator">Administrator(bool type)</param>
+            <returns>
+               User list
+            </returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.AddMember(System.Boolean,System.String,System.String,System.String,System.Guid[],System.String,System.String,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact},System.String,System.String)">
+            <summary>
+            Adds a new portal user with the first and last name, email address and several optional parameters specified in the request
+            </summary>
+            <short>
+            Add new user
+            </short>
+            <param name="isVisitor">User or Visitor (bool type: false|true)</param>
+            <param name="email">Email</param>
+            <param name="firstname">First name</param>
+            <param name="lastname">Last name</param>
+            <param name="department" optional="true">Department</param>
+            <param name="title" optional="true">Title</param>
+            <param name="location" optional="true">Location</param>
+            <param name="sex" optional="true">Sex (male|female)</param>
+            <param name="birthday" optional="true">Birthday</param>
+            <param name="worksfrom" optional="true">Works from date. If not specified - current will be set</param>
+            <param name="comment" optional="true">Comment for user</param>
+            <param name="contacts">List of contacts</param>
+            <param name="files">Avatar photo url</param>
+            <param name="password" optional="true">User Password</param>
+            <returns>Newly created user</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.AddMemberAsActivated(System.Boolean,System.String,System.String,System.String,System.Guid[],System.String,System.String,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact},System.String,System.String)">
+            <summary>
+            Adds a new portal user with the first and last name, email address and several optional parameters specified in the request
+            </summary>
+            <short>
+            Add new user
+            </short>
+            <param name="isVisitor">User or Visitor (bool type: false|true)</param>
+            <param name="email">Email</param>
+            <param name="firstname">First name</param>
+            <param name="lastname">Last name</param>
+            <param name="department" optional="true">Department</param>
+            <param name="title" optional="true">Title</param>
+            <param name="location" optional="true">Location</param>
+            <param name="sex" optional="true">Sex (male|female)</param>
+            <param name="birthday" optional="true">Birthday</param>
+            <param name="worksfrom" optional="true">Works from date. If not specified - current will be set</param>
+            <param name="comment" optional="true">Comment for user</param>
+            <param name="contacts">List of contacts</param>
+            <param name="files">Avatar photo url</param>
+            <param name="password">User Password</param>
+            <returns>Newly created user</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.UpdateMember(System.Boolean,System.String,System.String,System.String,System.String,System.Guid[],System.String,System.String,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact},System.String,System.Nullable{System.Boolean})">
+            <summary>
+            Updates the data for the selected portal user with the first and last name, email address and/or optional parameters specified in the request
+            </summary>
+            <short>
+            Update user
+            </short>
+            <param name="isVisitor">User or Visitor (bool type: false|true)</param>
+            <param name="userid">User ID to update</param>
+            <param name="firstname">First name</param>
+            <param name="lastname">Last name</param>
+            <param name="comment" optional="true">Comment for user</param>
+            <param name="department" optional="true">Department</param>
+            <param name="title" optional="true">Title</param>
+            <param name="location" optional="true">Location</param>
+            <param name="sex" optional="true">Sex (male|female)</param>
+            <param name="birthday" optional="true">Birthday</param>
+            <param name="worksfrom" optional="true">Works from date. If not specified - current will be set</param>
+            <param name="contacts">List fo contacts</param>
+            <param name="files">Avatar photo url</param>
+            <param name="disable"></param>
+            <returns>Newly created user</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.DeleteMember(System.String)">
+            <summary>
+            Deletes the user with the ID specified in the request from the portal
+            </summary>
+            <short>
+            Delete user
+            </short>
+            <param name="userid">ID of user to delete</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.UpdateMemberContacts(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact})">
+            <summary>
+            Updates the specified user contact information merging the sent data with the present on the portal
+            </summary>
+            <short>
+            Update user contacts
+            </short>
+            <param name="userid">User ID</param>
+            <param name="contacts">Contacts list</param>
+            <returns>Updated user profile</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.SetMemberContacts(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact})">
+            <summary>
+            Updates the specified user contact information changing the data present on the portal for the sent data
+            </summary>
+            <short>
+            Set user contacts
+            </short>
+            <param name="userid">User ID</param>
+            <param name="contacts">Contacts list</param>
+            <returns>Updated user profile</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.DeleteMemberContacts(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact})">
+            <summary>
+            Updates the specified user contact information deleting the data specified in the request from the portal
+            </summary>
+            <short>
+            Delete user contacts
+            </short>
+            <param name="userid">User ID</param>
+            <param name="contacts">Contacts list</param>
+            <returns>Updated user profile</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetMemberPhoto(System.String)">
+            <summary>
+            Get user photoes
+            </summary>
+            <short>
+            Get user photoes
+            </short>
+            <param name="userid">User ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.UpdateMemberPhoto(System.String,System.String)">
+            <summary>
+            Updates the specified user photo with the pathname
+            </summary>
+            <short>
+            Update user photo
+            </short>
+            <param name="userid">User ID</param>
+            <param name="files">Avatar photo url</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.DeleteMemberPhoto(System.String)">
+            <summary>
+            Deletes the photo of the user with the ID specified in the request
+            </summary>
+            <short>
+            Delete user photo
+            </short>
+            <param name="userid">User ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.CreateMemberPhotoThumbnails(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Create photo thumbnails by coordinates of original image
+            </summary>
+            <short>
+            Create user photo thumbnails
+            </short>
+            <param name="userid">User ID</param>
+            <param name="tmpFile">Path to the temporary file</param>
+            <param name="x">X</param>
+            <param name="y">Y</param>
+            <param name="width">Width</param>
+            <param name="height">Height</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.SendUserPassword(System.String)">
+            <summary>
+            Remind password for the user with email specified in the request
+            </summary>
+            <short>
+            Remind user password
+            </short>
+            <param name="email">User email</param>     
+            <returns></returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.ChangeUserPassword(System.Guid,System.String,System.String)">
+            <summary>
+              Sets the password and email for the user with the ID specified in the request
+            </summary>
+            <param name="userid">User ID</param>
+            <param name="password">Password</param>
+            <param name="email">New email</param>
+            <returns>Detailed user information</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.UpdateEmployeeActivationStatus(ASC.Core.Users.EmployeeActivationStatus,System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+              Sets the required activation status to the list of users with the ID specified in the request
+            </summary>
+            <summary>
+              Set activation status
+            </summary>
+            <param name="userIds">User list ID</param>
+            <param name="activationstatus">Required status</param>
+            <returns>List of users</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.UpdateUserType(ASC.Core.Users.EmployeeType,System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Changes the type between user and guest for the user with the ID specified in the request
+            </summary>
+            <short>
+            User type change
+            </short>
+            <param name="type">New user type</param>
+            <param name="userIds">User ID list</param>
+            <returns>User list</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.UpdateUserStatus(ASC.Core.Users.EmployeeStatus,System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Changes the status between active and disabled for the user with the ID specified in the request
+            </summary>
+            <short>
+            User status change
+            </short>
+            <param name="status">New user status</param>
+            <param name="userIds">User ID list</param>
+            <returns>User list</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.ResendUserInvites(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Sends emails once again for the users who have not activated their emails
+            </summary>
+            <short>
+            Send activation email
+            </short>
+            <param name="userIds">User ID list</param>
+            <returns>User list</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.RemoveUsers(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Delete the list of selected users
+            </summary>
+            <short>
+            Delete users
+            </short>
+            <param name="userIds">User ID list</param>
+            <returns>User list</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.SendInstructionsToDelete">
+            <summary>
+            Send instructions for delete user own profile
+            </summary>
+            <short>
+            Send delete instructions
+            </short>
+            <returns>Info message</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.JoinToAffiliateProgram">
+            <summary>
+            Join to affiliate programm
+            </summary>
+            <short>
+            Join to affiliate programm
+            </short>
+            <returns>Link to affiliate programm</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.LinkAccount(System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.UnlinkAccount(System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetReassignProgress(System.Guid)">
+            <summary>
+            Returns the progress of the started reassign process
+            </summary>
+            <param name="userId">User ID whose data is reassigned</param>
+            <category>Reassign user data</category>
+            <returns>Reassign Progress</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.TerminateReassign(System.Guid)">
+            <summary>
+            Terminate reassign process
+            </summary>
+            <param name="userId">User ID whose data is reassigned</param>
+            <category>Reassign user data</category>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.StartReassign(System.Guid,System.Guid,System.Boolean)">
+            <summary>
+            Start a reassign process
+            </summary>
+            <param name="fromUserId">From User ID</param>
+            <param name="toUserId">To User ID</param>
+            <param name="deleteProfile">Delete profile when reassignment will be finished</param>
+            <category>Reassign user data</category>
+            <returns>Reassign Progress</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetRemoveProgress(System.Guid)">
+            <summary>
+            Returns the progress of the started remove process
+            </summary>
+            <param name="userId">User ID</param>
+            <category>Remove user data</category>
+            <returns>Remove Progress</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.TerminateRemove(System.Guid)">
+            <summary>
+            Terminate remove process
+            </summary>
+            <param name="userId">User ID</param>
+            <category>Remove user data</category>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.StartRemove(System.Guid)">
+            <summary>
+            Start a remove process
+            </summary>
+            <param name="userId">User ID</param>
+            <category>Remove user data</category>
+            <returns>Remove Progress</returns>
+        </member>
+        <member name="T:ASC.Api.Employee.GroupsApi">
+            <summary>
+            Groups access
+            </summary>
+        </member>
+        <member name="M:ASC.Api.Employee.GroupsApi.GetAll">
+            <summary>
+            Returns the general information about all groups, such as group ID and group manager
+            </summary>
+            <short>
+            All groups
+            </short>
+            <returns>List of groups</returns>
+             <remarks>
+             This method returns partial group info
+             </remarks>
+        </member>
+        <member name="M:ASC.Api.Employee.GroupsApi.GetById(System.Guid)">
+            <summary>
+            Returns the detailed information about the selected group: group name, category, description, manager, users and parent group if any
+            </summary>
+            <short>
+            Specific group
+            </short>
+            <param name="groupid">Group ID</param>
+            <returns>Group</returns>
+             <remarks>
+             That method returns full group info
+             </remarks>
+        </member>
+        <member name="M:ASC.Api.Employee.GroupsApi.GetByUserId(System.Guid)">
+            <summary>
+            Returns the group list for user
+            </summary>
+            <short>
+            User groups
+            </short>
+            <param name="userid">User ID</param>
+            <returns>Group</returns>
+             <remarks>
+             That method returns user groups
+             </remarks>
+        </member>
+        <member name="M:ASC.Api.Employee.GroupsApi.AddGroup(System.Guid,System.String,System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Adds a new group with the group manager, name and users specified
+            </summary>
+            <short>
+            Add new group
+            </short>
+            <param name="groupManager">Group manager</param>
+            <param name="groupName">Group name</param>
+            <param name="members">List of group users</param>
+            <returns>Newly created group</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.GroupsApi.UpdateGroup(System.Guid,System.Guid,System.String,System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Updates an existing group changing the group manager, name and/or users
+            </summary>
+            <short>
+            Update existing group
+            </short>
+            <param name="groupid">Group ID</param>
+            <param name="groupManager">Group manager</param>
+            <param name="groupName">Group name</param>
+            <param name="members">List of group users</param>
+            <returns>Newly created group</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.GroupsApi.DeleteGroup(System.Guid)">
+            <summary>
+            Deletes the selected group from the list of groups on the portal
+            </summary>
+            <short>
+            Delete group
+            </short>
+            <param name="groupid">Group ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Employee.GroupsApi.TransferMembersTo(System.Guid,System.Guid)">
+            <summary>
+            Move all the users from the selected group to another one specified
+            </summary>
+            <short>
+            Move group users
+            </short>
+            <param name="groupid">ID of group to move from</param>
+            <param name="newgroupid">ID of group to move to</param>
+            <returns>Group info which users were moved</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.GroupsApi.SetMembersTo(System.Guid,System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Manages the group users deleting the current users and setting new ones instead
+            </summary>
+            <short>
+            Set group users
+            </short>
+            <param name="groupid">Group ID</param>
+            <param name="members">User list</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Employee.GroupsApi.AddMembersTo(System.Guid,System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Add new group users keeping the current users and adding new ones
+            </summary>
+            <short>
+            Add group users
+            </short>
+            <param name="groupid">Group ID</param>
+            <param name="members">User list</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Employee.GroupsApi.SetManager(System.Guid,System.Guid)">
+            <summary>
+            Sets the user with the ID sent as a manager to the selected group
+            </summary>
+            <short>
+            Set group manager
+            </short>
+            <param name="groupid">Group ID</param>
+            <param name="userid">User ID to become manager</param>
+            <returns></returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Employee.GroupsApi.RemoveMembersFrom(System.Guid,System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Removes the specified group users with all the rest current group users retained
+            </summary>
+            <short>
+            Remove group users
+            </short>
+            <param name="groupid">Group ID</param>
+            <param name="members">User list</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
